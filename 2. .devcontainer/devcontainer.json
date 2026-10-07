@@ -1,0 +1,8 @@
+{
+  "name": "Windows in Codespaces",
+  "image": "://microsoft.com",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postStartCommand": "docker run -d --name windows -p 8006:8006 --device=/dev/kvm --cap-add=NET_ADMIN --restart always -e RAM_SIZE=8G -e CPU_CORES=4 dockurr/windows"
+}
